@@ -105,6 +105,12 @@ function Sidebar() {
                                             <p>Manage Subcategory</p>
                                         </Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link to="/admin/subcategory/managesubcategoryv2" className="nav-link">
+                                            <i className="far fa-circle nav-icon" />
+                                            <p>Manage SubcategoryV2</p>
+                                        </Link>
+                                    </li>
 
                                 </ul>
                             </li>
@@ -123,6 +129,12 @@ function Sidebar() {
                                     </li>
                                     <li className="nav-item">
                                         <Link to="/admin/listsubcategory/managelistsubcategory" className="nav-link">
+                                            <i className="far fa-circle nav-icon" />
+                                            <p>Manage List Subcategory</p>
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/admin/listsubcategory/managelistsubcategoryv2" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>Manage List Subcategory</p>
                                         </Link>

@@ -37,7 +37,7 @@ const AddListSubcategory = () => {
     };
 
     const loadsub = async (id) => {
-      alert(id)
+      //alert(id)
       const gurl = `subcateview/${id}`;
       const result = await axios.get(gurl);
      // console.log(result.data);
@@ -60,7 +60,7 @@ const AddListSubcategory = () => {
         await axios.post('listsubcategory',input)
         .then(response => {
           //console.log(response.data.results)
-          setInput({category_id:"",subcategory_id:"",listsubcategory_name:"", priority:""});
+          setInput({listsubcategory_name:"", priority:""});
           //loadUsers();
         })
         .catch(error => {

@@ -17,6 +17,8 @@ import Protected from './Protected';
 import AddSlider from './slider/AddSlider';
 import ManageSlider from './slider/ManageSlider';
 import newProduct from './allslidermenu/newProduct';
+import ManageSubCategoryV2 from './subcategory/ManageSubCategoryV2';
+import ManageListSubCategoryv2 from './listsubcategory/ManageListSubCategoryv2';
 
 function Routes() {
     return (
@@ -32,8 +34,10 @@ function Routes() {
                     <Route path="/admin/category/managecategory" exact component={ManageCategory} />
                     <Route path="/admin/subcategory/addsubcategory" exact component={AddSubCategory} />
                     <Route path="/admin/subcategory/managesubcategory" exact component={ManageSubCategory} />
+                    <Route path="/admin/subcategory/managesubcategoryv2" exact component={ManageSubCategoryV2} />
                     <Route path="/admin/listsubcategory/addlistsubcategory" exact component={AddListSubcategory} />
                     <Route path="/admin/listsubcategory/managelistsubcategory" exact component={ManageListSubCategory} />
+                    <Route path="/admin/listsubcategory/managelistsubcategoryv2" exact component={ManageListSubCategoryv2} />
                     <Route path="/admin/product/addproduct" exact component={AddProduct} />
                     <Route path="/admin/product/manageproduct" exact component={ManageProduct} />
                     <Route path="/admin/slider/addslider" exact component={AddSlider} />

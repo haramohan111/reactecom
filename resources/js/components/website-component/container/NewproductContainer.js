@@ -35,8 +35,8 @@ function NewproductContainer(props) {
         props.menuId();
        // console.log("mmmmm"+props.menuId());
       }, [])
-    console.log(props.getData.menuid);
-     console.log(props.getData.newProduct);
+    // console.log(props.getData.menuid);
+    //  console.log(props.getData.newProduct);
     const settings = {
         focusOnSelect: true,
         infinite: true,

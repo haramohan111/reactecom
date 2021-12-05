@@ -1,8 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import Footer from '../Footer';
-import Header from '../Header';
 import Pagination from 'react-js-pagination';
-import Sidebar from '../Sidebar';
 import axios from 'axios';
 import ClipLoader from "react-spinners/ClipLoader";
 
@@ -13,8 +10,7 @@ function ManageSubCategory() {
     let [loading, setLoading] = useState(false);
   
   
-  
-  
+    
     useEffect(() =>{
       loadUsers();
       setLoading(true);

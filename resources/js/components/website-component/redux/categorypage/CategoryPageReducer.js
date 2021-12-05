@@ -1,6 +1,6 @@
 import {FETCH_CATEGORYPAGE_REQUEST,
     FETCH_CATEGORYPAGE_SUCCESS,
-    FETCH_CATEGORYPAGE_FAILURE} from 'CategoryPageTypes'
+    FETCH_CATEGORYPAGE_FAILURE} from './CategoryPageTypes'
 
 const initialState = {
         loading: false,
@@ -9,7 +9,7 @@ const initialState = {
  }
 
  const reducer = (state = initialState, action) => {
-    // console.log(action);
+     //console.log(action);
      switch (action.type) {
        case FETCH_CATEGORYPAGE_REQUEST:
          return {

@@ -160,7 +160,7 @@ function CategoryContainer({ userData, fetchCategory }) {
                                    
                                     { Array.isArray(submenu.listsubmenu_list) && submenu.listsubmenu_list.map((alist,index) =>
                                      
-                                    <Link to={'/categorypage/'+menu.id}> <li key={index}>{alist[0].listsubcategory_name.toUpperCase()}</li></Link>
+                                    <Link to={'/categorypage/'+window.btoa(menu.id)+'/'+window.btoa(submenu.id)+'/'+window.btoa(alist[index].id)}> <li key={index}>{alist[index].listsubcategory_name.toUpperCase()}</li></Link>
                                     )}
                                       
 

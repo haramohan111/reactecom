@@ -53,6 +53,7 @@ Route::get('/admin/categoryview',[CategoryController::class, 'show']);
 
 Route::post('/admin/subcategory',[SubcategoryController::class, 'create']);
 Route::get('/admin/subcategoryview',[SubcategoryController::class, 'show']);
+Route::get('/admin/subcategoryviewv2',[SubcategoryController::class, 'subcategoryviewv2']);
 Route::get('/admin/subcateview/{id}',[SubcategoryController::class, 'SubCatview']);
 
 Route::post('/admin/listsubcategory',[ListSubcategoryController::class, 'create']);
@@ -77,7 +78,7 @@ Route::post('login', [App\Http\Controllers\Api\Front\UserController::class, 'log
 Route::post('register', [ApiController::class, 'register']);
 Route::get('newproduct',[NewProductController::class, 'index']);
 Route::get('menuid',[NewProductController::class, 'menuid']);
-
+Route::get('categorypage/{id}/{id1}/{id2}', [App\Http\Controllers\Api\Front\CategoryPageController::class, 'index']);
 
 // Route::group([
 
