@@ -1,8 +1,5 @@
 import axios from 'axios'
 import React,{useEffect,useState} from 'react'
-import Footer from '../Footer'
-import Header from '../Header'
-import Sidebar from '../Sidebar'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 

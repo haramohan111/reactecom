@@ -78,7 +78,7 @@ Route::post('login', [App\Http\Controllers\Api\Front\UserController::class, 'log
 Route::post('register', [ApiController::class, 'register']);
 Route::get('newproduct',[NewProductController::class, 'index']);
 Route::get('menuid',[NewProductController::class, 'menuid']);
-Route::get('categorypage/{id}/{id1}/{id2}', [App\Http\Controllers\Api\Front\CategoryPageController::class, 'index']);
+Route::get('categorypage/{id}/{subid}/{listid}', [App\Http\Controllers\Api\Front\CategoryPageController::class, 'show']);
 
 // Route::group([
 

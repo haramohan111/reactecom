@@ -11,7 +11,7 @@ function Routes() {
             <Switch>
                 <Route path="/" exact component={Home}></Route>
                 <Route path="/login" exact component={Login}></Route>
-                <Route path="/categorypage/:id/:id/:id" exact component={CategoryPageContainer}></Route>
+                <Route path="/categorypage/:id/:subid/:listid" exact component={CategoryPageContainer}></Route>
             </Switch>
         </div>
     )

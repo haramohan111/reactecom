@@ -3,12 +3,18 @@ import { connect } from 'react-redux'
 import { fetchCategory } from '../redux'
 import {Link} from "react-router-dom"
 // import 'owl.carousel/dist/assets/.css';  
+import { listCategory } from '../redux/categorypage/CategoryPageActions'
 
-function CategoryContainer({ userData, fetchCategory }) {
+function CategoryContainer({ userData, fetchCategory,props }) {
     useEffect(() => {
         fetchCategory()
       }, [])
       //console.log(userData.category.menu_result);
+      const onInputClick = (seg1,seg2,seg3) =>{  
+        alert(seg1,seg2,seg3);    
+        props.listCategory(seg1, seg2, seg3);
+        }
+
       return  (
         <div>
           <header className="header-style-1">
@@ -160,7 +166,8 @@ function CategoryContainer({ userData, fetchCategory }) {
                                    
                                     { Array.isArray(submenu.listsubmenu_list) && submenu.listsubmenu_list.map((alist,index) =>
                                      
-                                    <Link to={'/categorypage/'+window.btoa(menu.id)+'/'+window.btoa(submenu.id)+'/'+window.btoa(alist[index].id)}> <li key={index}>{alist[index].listsubcategory_name.toUpperCase()}</li></Link>
+                                    // <Link to={'/categorypage/'+window.btoa(menu.id)+'/'+window.btoa(submenu.id)+'/'+window.btoa(alist[index].id)}> <li key={index}>{alist[index].listsubcategory_name.toUpperCase()}</li></Link>
+                                    <Link to={'/categorypage/'+menu.id+'/'+submenu.id+'/'+alist[index].id}> <li key={index} onClick={e=>onInputClick(menu.id,submenu.id,alist[index].id)}>{alist[index].listsubcategory_name.toUpperCase()}</li></Link>
                                     )}
                                       
 
@@ -228,13 +235,15 @@ function CategoryContainer({ userData, fetchCategory }) {
 
 const mapStateToProps = state => {
     return {
-      userData: state.category
+      userData: state.category,
+      pageData: state.categorypage
     }
   }
   
   const mapDispatchToProps = dispatch => {
     return {
-      fetchCategory: () => dispatch(fetchCategory())
+      fetchCategory: () => dispatch(fetchCategory()),
+      listCategory: (id, subid, listid) => dispatch(listCategory(id, subid, listid))
     }
   }
   
